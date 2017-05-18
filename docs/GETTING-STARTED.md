@@ -5,7 +5,7 @@ To get you started you have to be registered at [Contentful](https://www.content
 ## Clone the repo and install dependencies
 
 ```bash
-$ git clone git@github.com:stefanjudis/contentful-blog-in-5-min.git
+$ git clone git@github.com:contentful/blog-in-5-minutes.git
 
 $ npm install
 ```
