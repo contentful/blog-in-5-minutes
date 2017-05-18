@@ -14,8 +14,8 @@ const config = {
       { hid: 'description', name: 'description', content: 'Create a Contentful blog in 5 minutes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' }
     ]
   },
   /*
