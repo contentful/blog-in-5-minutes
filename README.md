@@ -1,4 +1,4 @@
-# cf-contentful-blog-in-5-min
+# blog-in-5-min
 
 > A static blog or (dynamic blog) based on Contentful
 
