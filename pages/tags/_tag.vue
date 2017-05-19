@@ -15,7 +15,7 @@
 
     <section class="items">
       <div class="items-bar wrapper">
-        <h2>All articles ({{ posts.length }}) #{{ tag }}</h2>
+        <h2>All #{{ tag }} articles ({{ posts.length }})</h2>
       </div>
       <ul class="items-list wrapper">
         <li class="item" v-for="post in posts">
