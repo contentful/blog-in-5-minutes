@@ -1,8 +1,5 @@
 <template>
   <div>
-
-    <Greeting></Greeting>
-
     <!-- Article header -->
     <header class="article header">
       <div class="picture">
@@ -35,7 +32,6 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import {cdaClient} from '../../plugins/contentful-client.js'
-import Greeting from '~components/greeting.vue'
 import Navigation from '~components/navigation.vue'
 
 export default {
@@ -51,7 +47,6 @@ export default {
     .catch(console.error)
   },
   components: {
-    Greeting,
     Navigation,
     VueMarkdown
   }

@@ -1,13 +1,23 @@
 <template>
   <div class="container">
+    <Greeting></Greeting>
     <main role="main">
       <nuxt/>
     </main>
   </div>
 </template>
 
-<style>
+<script>
+  import Greeting from '~components/greeting.vue'
 
+  export default {
+    components: {
+      Greeting
+    }
+  }
+</script>
+
+<style>
   @font-face {
     font-family: "Avenir";
     font-weight: 400;
@@ -43,6 +53,32 @@
   h2,
   h3 {
     font-size: 2em;
+  }
+
+  /* Items section */
+  .items {
+    background: #ffffff;
+  }
+
+  .items-list {
+    overflow: hidden;
+  }
+
+  .item {
+    padding: 1em 3em 1em 0;
+  }
+
+  @media all and (min-width: 600px) {
+    .item {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    .item {
+      width: 33.333%;
+    }
   }
 
   /* Shared */

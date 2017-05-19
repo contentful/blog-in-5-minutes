@@ -1,8 +1,5 @@
 <template>
   <div>
-
-    <Greeting></Greeting>
-
     <!-- Homepage header -->
     <header class="home header">
       <div class="picture">
@@ -54,7 +51,6 @@
 
 <script>
 import {cdaClient} from '../plugins/contentful-client.js'
-import Greeting from '~components/greeting.vue'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
@@ -76,7 +72,6 @@ export default {
     }).catch(console.error)
   },
   components: {
-    Greeting,
     Navigation,
     ArticlePreview
   }
@@ -139,33 +134,6 @@ export default {
 
 .social-icons svg:hover {
   fill: #2199e8;
-}
-
-/* Items section */
-
-.items {
-  background: #ffffff;
-}
-
-.items-list {
-  overflow: hidden;
-}
-
-.item {
-  padding: 1em 3em 1em 0;
-}
-
-@media all and (min-width: 600px) {
-  .item {
-    float: left;
-    width: 50%;
-  }
-}
-
-@media all and (min-width: 900px) {
-  .item {
-    width: 33.333%;
-  }
 }
 
 </style>
