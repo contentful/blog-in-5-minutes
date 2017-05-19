@@ -34,8 +34,7 @@
       </div>
     </header>
 
-    <!-- Items section -->
-    <section class="items">
+    <section class="body-container">
       <div class="items-bar wrapper">
         <h2>Recent articles</h2>
       </div>

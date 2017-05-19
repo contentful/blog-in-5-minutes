@@ -2,6 +2,12 @@
   <div>
     <!-- Article header -->
     <header class="article header">
+      <div class="foreground">
+        <div class="page-bar wrapper">
+          <h1>John Doe</h1>
+          <Navigation></Navigation>
+        </div>
+      </div>
       <div class="picture">
         <img
           :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
@@ -10,21 +16,17 @@
           :alt="post.fields.heroImage.fields.description"
         >
       </div>
-      <div class="foreground">
-        <div class="page-bar wrapper">
-          <h1>John Doe</h1>
-          <Navigation></Navigation>
-        </div>
-        <div class="page-info wrapper">
-          <time>{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
-          <h2>{{ post.fields.title }}</h2>
-        </div>
-      </div>
     </header>
 
-    <main class="row column">
-      <vue-markdown>{{post.fields.body}}</vue-markdown>
-    </main>
+    <section class="body-container">
+      <main class="wrapper">
+        <div class="copy">
+          <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
+          <h2 class="headline">{{ post.fields.title }}</h2>
+          <vue-markdown>{{post.fields.body}}</vue-markdown>
+        </div>
+      </main>
+    </section>
 
   </div>
 </template>
@@ -57,18 +59,13 @@ export default {
 
 .article.header {
   height: auto;
-  /*height: 320px;*/
+}
+
+.foreground .page-bar {
+  border-bottom: 0;
 }
 
 .picture {
-  position: relative;
-  z-index: 2;
-  /*position: absolute;
-  z-index: 2;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  width: 100%;
-  height: 100%;*/
 }
 
 .picture img {
@@ -76,15 +73,19 @@ export default {
   width: 100%;
 }
 
-.foreground {
-  overflow: hidden;
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  padding: 2em 0;
+.copy {
+  padding-top: 5em;
+  padding-bottom: 5em;
+     -webkit-columns: 2 280px;
+        -moz-columns: 2 280px;
+             columns: 2 280px;
+  -webkit-column-gap: 5vw;
+     -moz-column-gap: 5vw;
+          column-gap: 5vw;
+}
+
+.headline {
+  padding-bottom: 2em;
 }
 
 </style>

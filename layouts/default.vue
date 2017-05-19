@@ -49,7 +49,8 @@
     color: #ffffff;
   }
 
-  .header:not(.home) h2 {
+  .blog.header h2,
+  .tag-page.header h2 {
     text-align: center;
     padding-top: 5em;
   }
@@ -60,8 +61,8 @@
     font-size: 2em;
   }
 
-  /* Items section */
-  .items {
+  /* Copy section */
+  .body-container {
     background: #ffffff;
   }
 

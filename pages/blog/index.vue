@@ -13,7 +13,7 @@
       </div>
     </header>
 
-    <section class="items">
+    <section class="body-container">
       <div class="items-bar wrapper">
         <h2>All articles ({{ posts.length }})</h2>
       </div>
