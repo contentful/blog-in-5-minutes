@@ -13,3 +13,33 @@ export default {
   components: {}
 }
 </script>
+
+<style>
+
+  h1 {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .top-nav {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .menu a:link,
+  .menu a:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+</style>
