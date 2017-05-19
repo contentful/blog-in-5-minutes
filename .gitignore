@@ -134,7 +134,7 @@ $RECYCLE.BIN/
 dist
 
 # Contentful configs
-.contentful.js
+.contentful.json
 
 # data
 data

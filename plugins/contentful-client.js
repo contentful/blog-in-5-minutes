@@ -14,7 +14,7 @@ try {
       throw new Error(
         'Please provide needed Contentful configs:\n' +
         'There are two way to do so:\n' +
-        '- define a .contentful.js file (similar to .contentful.sample) in the root of this directory\n' +
+        '- define a .contentful.json file (similar to .contentful.sample.json) in the root of this directory\n' +
         '- define environment variables CTF_PERSON_ID, CTF_BLOG_POST_TYPE_ID, CTF_SPACE_ID, CTF_ACCESS_TOKEN'
       )
     }

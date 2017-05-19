@@ -51,7 +51,7 @@ $ npm run import-data -- --space-id YOUR_SPACE_ID --management-token YOUR_MANAGE
 
 ## Create a config file
 
-Now that you have the Contentful setup done, it's time to define the configuration to run the project. To make this project work locally you have to rename the `.contentful.sample` in the root of the directory to `.contentful.js`. You have to set two values:
+Now that you have the Contentful setup done, it's time to define the configuration to run the project. To make this project work locally you have to rename the `.contentful.sample.json` in the root of the directory to `.contentful.json`. You have to set two values:
 
 Needed config data:
 - the ID of the space where your data lives - `CTF_SPACE_ID`
