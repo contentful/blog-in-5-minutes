@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Tag page header -->
-    <header class="tag header">
+    <header class="tag-page header">
       <div class="foreground">
         <div class="page-bar wrapper">
           <h1>John Doe</h1>
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
-          #{{ tag }}
+          <h2>#{{ tag }}</h2>
         </div>
       </div>
     </header>

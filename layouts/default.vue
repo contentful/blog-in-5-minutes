@@ -49,6 +49,11 @@
     color: #ffffff;
   }
 
+  .header:not(.home) h2 {
+    text-align: center;
+    padding-top: 5em;
+  }
+
   h1,
   h2,
   h3 {
