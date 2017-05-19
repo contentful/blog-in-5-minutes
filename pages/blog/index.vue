@@ -2,12 +2,12 @@
   <div>
     <!-- Blog header -->
     <header class="blog header">
-      <div class="main">
+      <div class="foreground">
         <div class="page-bar wrapper">
           <h1>John Doe</h1>
           <Navigation></Navigation>
         </div>
-        <div class="bio wrapper">
+        <div class="page-info wrapper">
           <h2>Blog</h2>
         </div>
       </div>

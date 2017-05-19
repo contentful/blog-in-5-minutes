@@ -5,12 +5,12 @@
       <div class="picture">
         <img :src="person.fields.image.fields.file.url + '?w=1200'">
       </div>
-      <div class="main">
+      <div class="foreground">
         <div class="page-bar wrapper">
           <h1>{{ person.fields.name }}</h1>
           <Navigation></Navigation>
         </div>
-        <div class="bio wrapper">
+        <div class="page-info wrapper">
           <h2>{{ person.fields.title }}</h2>
           <p>{{ person.fields.shortBio }}</p>
           <ul class="social-icons">
@@ -98,14 +98,13 @@ export default {
   width: 100%;
 }
 
-.main {
+.foreground {
   overflow: hidden;
   position: relative;
   z-index: 3;
-  padding: 2em 0;
 }
 
-.main p {
+.foreground p {
   max-width: 250px;
 }
 

@@ -10,12 +10,12 @@
           :alt="post.fields.heroImage.fields.description"
         >
       </div>
-      <div class="main">
+      <div class="foreground">
         <div class="page-bar wrapper">
           <h1>John Doe</h1>
           <Navigation></Navigation>
         </div>
-        <div class="bio wrapper">
+        <div class="page-info wrapper">
           <time>{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
           <h2>{{ post.fields.title }}</h2>
         </div>
@@ -76,7 +76,7 @@ export default {
   width: 100%;
 }
 
-.main {
+.foreground {
   overflow: hidden;
   position: absolute;
   top: 0; bottom: 0;

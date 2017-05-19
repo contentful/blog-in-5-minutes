@@ -2,12 +2,12 @@
   <div>
     <!-- Tag page header -->
     <header class="tag header">
-      <div class="main">
+      <div class="foreground">
         <div class="page-bar wrapper">
           <h1>John Doe</h1>
           <Navigation></Navigation>
         </div>
-        <div class="bio wrapper">
+        <div class="page-info wrapper">
           #{{ tag }}
         </div>
       </div>
