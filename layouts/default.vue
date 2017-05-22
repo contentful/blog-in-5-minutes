@@ -51,11 +51,22 @@
     padding: 2em 10%;
   }
 
+  h1 a:link,
+  h1 a:visited {
+    text-decoration: none;
+    color: #373F49;
+  }
+
   .blog.header h2,
   .tag-page.header h2 {
     text-align: center;
     padding: 2.5em 0;
     color: #A0A0A0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
   }
 
   h1,

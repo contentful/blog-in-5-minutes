@@ -4,7 +4,7 @@
     <header class="article header">
       <div class="foreground">
         <div class="page-bar wrapper">
-          <h1>John Doe</h1>
+          <h1><a href="/">John Doe</a></h1>
           <Navigation></Navigation>
         </div>
       </div>
@@ -20,9 +20,11 @@
 
     <section class="body-container">
       <main class="wrapper">
-        <div class="copy">
+        <div class="headline">
           <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
-          <h2 class="headline">{{ post.fields.title }}</h2>
+          <h2>{{ post.fields.title }}</h2>
+        </div>
+        <div class="copy">
           <vue-markdown>{{post.fields.body}}</vue-markdown>
         </div>
       </main>
@@ -57,35 +59,27 @@ export default {
 
 <style>
 
-.article.header {
-  height: auto;
-}
-
 .foreground .page-bar {
   border-bottom: 0;
 }
 
-.picture {
+.headline {
+  padding: 3em 0 0;
 }
 
-.picture img {
-  display: block;
-  width: 100%;
+.headline h2 {
+  font-size: 3.5em;
 }
 
 .copy {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 3em;
+  padding-bottom: 7em;
      -webkit-columns: 2 280px;
         -moz-columns: 2 280px;
              columns: 2 280px;
   -webkit-column-gap: 5vw;
      -moz-column-gap: 5vw;
           column-gap: 5vw;
-}
-
-.headline {
-  padding-bottom: 2em;
 }
 
 </style>

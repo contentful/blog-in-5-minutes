@@ -87,25 +87,28 @@ export default {
   color: #fff;
 }
 
-.home .page-bar {
-  border-bottom: 1px solid #241e3b;
-}
-
 .home .menu a:link,
 .home .menu a:visited {
   color: #fff;
+}
+
+.home .page-bar {
+  border-bottom: 1px solid #4e4b5f;
+}
+
+.home .page-info {
+  padding-top: 8.5em;
+}
+
+.home .page-info h2 {
+  font-size: 1.5em;
 }
 
 .picture {
   position: absolute;
   z-index: 2;
   top: 0; bottom: 0;
-  left: 20vw; right: 0;
-  width: 100%;
-}
-
-.picture img {
-  display: block;
+  left: 20%; right: 0;
   width: 100%;
 }
 
@@ -117,6 +120,7 @@ export default {
 
 .foreground p {
   max-width: 250px;
+  margin-bottom: 1em;
 }
 
 .social-icons {
@@ -136,10 +140,9 @@ export default {
 .social-icons svg {
   display: block;
   max-width: 100%;
-  fill: #ffffff;
-
-  width: 2em;
-  height: 2em;
+  fill: #fff;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .social-icons svg:hover {

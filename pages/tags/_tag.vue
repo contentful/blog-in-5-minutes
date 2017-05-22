@@ -4,7 +4,7 @@
     <header class="tag-page header">
       <div class="foreground">
         <div class="page-bar wrapper">
-          <h1>John Doe</h1>
+          <h1><a href="/">John Doe</a></h1>
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
