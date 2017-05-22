@@ -4,7 +4,7 @@
   <section class="greeting">
     <div class="message wrapper">
       <p>
-        <strong>Way to go!</strong> You just set up a Contentful account and a custom app. Now knock yourself out in the <a href="https://app.contentful.com/" target="_blank">Web App</a> or head over to the <a href="http://contentful.com/developers/docs" target="_blank">Documentation</a> to learn more about building with Contentful. Delete line <code>3</code> from <code>layouts/default.vue</code> to remove this message.
+        There you go! You just set up a Contentful account and a custom app. Now go ahead and <a href="https://app.contentful.com/" target="_blank">try the Web App</a> or head over to the <a href="http://contentful.com/developers/docs" target="_blank">Documentation</a> to learn more about building with Contentful. If you want to remove this message, delete line <code>3</code> in <code>layouts/default.vue</code>.
       </p>
       <button>Try the Web App</button>
     </div>
@@ -22,6 +22,7 @@ export default {
   .greeting {
     background: #fff;
     border: 1px solid #489CF1;
+    margin: 2em 0;
   }
 
   .message {
@@ -31,6 +32,12 @@ export default {
 
   .message p {
     margin-bottom: 2em;
+  }
+
+  code {
+    border-radius: 3px;
+    background: #E1E7EA;
+    padding: 3px 5px;
   }
 
   @media all and (min-width: 900px) {
