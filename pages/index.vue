@@ -80,8 +80,20 @@ export default {
 <style>
 
 .home.header {
-  background: #000000;
-  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  height: 610px;
+  background: #000;
+  color: #fff;
+}
+
+.home .page-bar {
+  border-bottom: 1px solid #241e3b;
+}
+
+.home .menu a:link,
+.home .menu a:visited {
+  color: #fff;
 }
 
 .picture {

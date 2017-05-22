@@ -33,6 +33,7 @@
     font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.65;
+    color: #373F49;
   }
 
   .wrapper {
@@ -42,17 +43,19 @@
   }
 
   .header {
-    overflow: hidden;
-    position: relative;
-    height: 610px;
-    background: #1D3242;
-    color: #ffffff;
+    background: #F7F9FA;
+  }
+
+  .page-bar {
+    max-width: 100%;
+    padding: 2em 10%;
   }
 
   .blog.header h2,
   .tag-page.header h2 {
     text-align: center;
-    padding-top: 5em;
+    padding: 2.5em 0;
+    color: #A0A0A0;
   }
 
   h1,

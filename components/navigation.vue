@@ -38,7 +38,7 @@ export default {
 
   .menu a:link,
   .menu a:visited {
-    color: #ffffff;
+    color: #373F49;
     text-decoration: none;
   }
 
