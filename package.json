@@ -23,6 +23,7 @@
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "contentful-import": "^4.4.3",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
@@ -32,5 +33,10 @@
     "gh-pages": "^1.0.0",
     "git-clone": "^0.1.0",
     "now": "^5.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
