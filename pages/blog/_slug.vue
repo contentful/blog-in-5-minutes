@@ -74,12 +74,8 @@ export default {
 .copy {
   padding-top: 3em;
   padding-bottom: 7em;
-     -webkit-columns: 2 280px;
-        -moz-columns: 2 280px;
-             columns: 2 280px;
-  -webkit-column-gap: 5vw;
-     -moz-column-gap: 5vw;
-          column-gap: 5vw;
+  columns: 2 280px;
+  column-gap: 5vw;
 }
 
 </style>

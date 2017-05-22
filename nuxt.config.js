@@ -38,7 +38,13 @@ const config = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['> 5%']
+      })
+    ]
   },
 
   /*

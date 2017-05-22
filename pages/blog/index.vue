@@ -52,7 +52,4 @@ export default {
 
 <style>
 
-  .blog {
-  }
-
 </style>
