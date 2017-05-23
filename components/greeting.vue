@@ -6,7 +6,7 @@
       <p>
         There you go! You just set up a Contentful account and a custom app. Now go ahead and <a href="https://app.contentful.com/" target="_blank">try the Web App</a> or head over to the <a href="http://contentful.com/developers/docs" target="_blank">Documentation</a> to learn more about building with Contentful. If you want to remove this message, delete line <code>3</code> in <code>layouts/default.vue</code>.
       </p>
-      <button>Try the Web App</button>
+      <a href="https://app.contentful.com/" target="_blank" class="cta">Try the Web App</a>
     </div>
   </section>
 
@@ -49,17 +49,18 @@ export default {
   }
 
 
-  .message button {
+  .message .cta {
     font-size: inherit;
     background: #489CF1;
     border: 0;
     border-radius: 3px;
     color: #fff;
     padding: 1em 2em;
+    text-decoration: none;
   }
 
   @media all and (min-width: 900px) {
-    .message button {
+    .message .cta {
       float: right;
       max-width: 20%;
     }
