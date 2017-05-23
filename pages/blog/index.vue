@@ -4,7 +4,7 @@
     <header class="blog header">
       <div class="foreground">
         <div class="page-bar wrapper">
-          <h1><a href="/">John Doe</a></h1>
+          <a href="/" class="person-name">John Doe</a>
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">

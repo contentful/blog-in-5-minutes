@@ -31,7 +31,7 @@
     max-width: 1280px;
     margin: 0 auto;
     font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.65;
     color: #373F49;
   }
@@ -49,12 +49,6 @@
   .page-bar {
     max-width: 100%;
     padding: 2em 10%;
-  }
-
-  h1 a:link,
-  h1 a:visited {
-    text-decoration: none;
-    color: #373F49;
   }
 
   .blog.header h2,

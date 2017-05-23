@@ -16,9 +16,13 @@ export default {
 
 <style>
 
-  h1 {
+  .person-name:link,
+  .person-name:visited {
     width: 50%;
     display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    color: #373F49;
   }
 
   .top-nav {

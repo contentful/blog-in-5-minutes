@@ -7,7 +7,7 @@
       </div>
       <div class="foreground">
         <div class="page-bar wrapper">
-          <h1>{{ person.fields.name }}</h1>
+          <a href="/" class="person-name">{{ person.fields.name }}</a>
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
@@ -84,6 +84,11 @@ export default {
   position: relative;
   height: 610px;
   background: #000;
+  color: #fff;
+}
+
+.home .person-name:link,
+.home .person-name:visited {
   color: #fff;
 }
 

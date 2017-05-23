@@ -4,7 +4,7 @@
     <header class="article header">
       <div class="foreground">
         <div class="page-bar wrapper">
-          <h1><a href="/">John Doe</a></h1>
+          <a href="/" class="person-name">John Doe</a>
           <Navigation></Navigation>
         </div>
       </div>
@@ -22,7 +22,7 @@
       <main class="wrapper">
         <div class="headline">
           <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
-          <h2>{{ post.fields.title }}</h2>
+          <h1>{{ post.fields.title }}</h1>
         </div>
         <div class="copy">
           <vue-markdown>{{post.fields.body}}</vue-markdown>
@@ -67,15 +67,17 @@ export default {
   padding: 3em 0 0;
 }
 
-.headline h2 {
+.headline h1 {
   font-size: 3.5em;
 }
 
 .copy {
   padding-top: 3em;
   padding-bottom: 7em;
-  columns: 2 280px;
-  column-gap: 5vw;
+}
+
+.copy * {
+  margin: 2em 0 1em;
 }
 
 </style>
