@@ -82,7 +82,9 @@ export default {
 .home.header {
   overflow: hidden;
   position: relative;
-  height: 610px;
+  height: 70vw;
+  min-height: 400px;
+  max-height: 610px;
   background: #000;
   color: #fff;
 }
@@ -102,7 +104,7 @@ export default {
 }
 
 .home .page-info {
-  padding-top: 8.5em;
+  padding-top: 12%;
 }
 
 .home .page-info h2 {
@@ -112,9 +114,18 @@ export default {
 .picture {
   position: absolute;
   z-index: 2;
-  top: 0; bottom: 0;
-  left: 20%; right: 0;
-  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  width: 150%;
+}
+
+@media all and (min-width: 600px) {
+  .picture {
+    left: 20%;
+    width: 100%;
+  }
 }
 
 .foreground {
@@ -124,8 +135,13 @@ export default {
 }
 
 .foreground p {
-  max-width: 250px;
   margin-bottom: 1em;
+}
+
+@media all and (min-width: 600px) {
+  .foreground p {
+    max-width: 250px;
+  }
 }
 
 .social-icons {
