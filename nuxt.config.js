@@ -7,15 +7,15 @@ const config = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'Custom app with Contentful',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Create a Contentful blog in 5 minutes' }
+      { hid: 'description', name: 'description', content: 'Custom app in under 5 minutes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' }
     ]
   },
   /*
@@ -38,7 +38,13 @@ const config = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['> 5%']
+      })
+    ]
   },
 
   /*

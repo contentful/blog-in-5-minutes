@@ -1,24 +1,35 @@
 <template>
   <div>
-    <Navigation></Navigation>
-    <div class="callout large">
-      <div class="row column text-center">
-        <time>{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
-        <h1>{{ post.fields.title }}</h1>
+    <!-- Article header -->
+    <header class="article header">
+      <div class="foreground">
+        <div class="page-bar wrapper">
+          <a href="/" class="person-name">John Doe</a>
+          <Navigation></Navigation>
+        </div>
       </div>
-    </div>
-    <img class="hero"
-      :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
-      :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=87&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=250&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=500&fit=fill 2000w`"
-      size="100vw"
-      :alt="post.fields.heroImage.fields.description"
-    >
-
-    <main class="row column">
       <div>
-        <vue-markdown>{{post.fields.body}}</vue-markdown>
+        <img
+          :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
+          :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=87&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=250&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=500&fit=fill 2000w`"
+          size="100vw"
+          :alt="post.fields.heroImage.fields.description"
+        >
       </div>
-    </main>
+    </header>
+
+    <section class="body-container">
+      <main class="wrapper">
+        <div class="headline">
+          <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
+          <h1>{{ post.fields.title }}</h1>
+        </div>
+        <div class="copy">
+          <vue-markdown>{{post.fields.body}}</vue-markdown>
+        </div>
+      </main>
+    </section>
+
   </div>
 </template>
 
@@ -47,7 +58,26 @@ export default {
 </script>
 
 <style>
-.hero {
-  margin: -1em 0 3em;
+
+.foreground .page-bar {
+  border-bottom: 0;
 }
+
+.headline {
+  padding: 3em 0 0;
+}
+
+.headline h1 {
+  font-size: 3.5em;
+}
+
+.copy {
+  padding-top: 3em;
+  padding-bottom: 7em;
+}
+
+.copy * {
+  margin: 2em 0 1em;
+}
+
 </style>

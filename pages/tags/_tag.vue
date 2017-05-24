@@ -1,35 +1,35 @@
 <template>
   <div>
-    <Navigation></Navigation>
-    <div class="callout large">
-      <div class="row column text-center">
-        <h1>#{{ tag }}</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 columns" v-for="post in posts">
-        <div class="post">
-          <img class="thumbnail"
-            :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
-            :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=131&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=375&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=1000&fit=fill 2000w`"
-            size="(min-width: 1024px) 1200px, 100vw"
-            :alt="post.fields.heroImage.fields.description"
-          >
-          <time>{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
-          <h4><nuxt-link :to="{ name: 'blog-slug', params: { slug: post.fields.slug }}">{{ post.fields.title }}</nuxt-link></h4>
-          <p>{{ post.fields.description }}</p>
-
-          <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.fields.slug }}" :aria-label="post.fields.title">Read more</nuxt-link>
+    <!-- Tag page header -->
+    <header class="tag-page header">
+      <div class="foreground">
+        <div class="page-bar wrapper">
+          <a href="/" class="person-name">John Doe</a>
+          <Navigation></Navigation>
+        </div>
+        <div class="page-info wrapper">
+          <h2>#{{ tag }}</h2>
         </div>
       </div>
-    </div>
+    </header>
+
+    <section class="body-container">
+      <div class="items-bar wrapper">
+        <h2>All articles tagged #{{ tag }} ({{ posts.length }})</h2>
+      </div>
+      <ul class="items-list wrapper">
+        <li class="item" v-for="post in posts">
+          <article-preview :post="post"></article-preview>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
 <script>
 import {cdaClient} from '../../plugins/contentful-client.js'
 import Navigation from '~components/navigation.vue'
+import ArticlePreview from '~components/article-preview.vue'
 
 export default {
   asyncData ({ params }) {
@@ -45,13 +45,11 @@ export default {
     })
   },
   components: {
+    ArticlePreview,
     Navigation
   }
 }
 </script>
 
 <style>
-.post {
-  padding: 2em 0;
-}
 </style>
