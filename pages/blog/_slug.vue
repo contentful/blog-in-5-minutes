@@ -72,12 +72,25 @@ export default {
 }
 
 .copy {
-  padding-top: 3em;
   padding-bottom: 7em;
 }
 
-.copy * {
+.copy *:not(div) {
   margin: 2em 0 1em;
+}
+
+.copy h3 {
+  font-size: 1.35em;
+}
+
+.copy ul {
+  margin: 0;
+  padding-left: 1em;
+  list-style: disc;
+}
+
+.copy li {
+  margin: 0;
 }
 
 </style>
