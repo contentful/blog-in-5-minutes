@@ -6,7 +6,7 @@ To get you started you have to be registered at [Contentful](https://www.content
 
 ```bash
 $ git clone git@github.com:contentful/blog-in-5-minutes.git
-
+$ cd blog-in-5-minutes
 $ npm install
 ```
 
@@ -77,7 +77,12 @@ To see the site working with your newly created data all you have to do is to ru
 
 ## Deploy the site to `now`
 
-`now` is a fairly new service by [zeit](https://zeit.co), which also provides static hosting. If you run `npm run deploy` you're asked for your email adress (which you have to confirm) once and then your site will find its way into the cloud.
+`now` is a fairly new service by [zeit](https://zeit.co), which also provides static hosting.
+
+If you haven't used it yet please run `npm run login` to register at zeit.
+This will take you only one minute.
+
+If you then run `npm run deploy` your site will find its way into the cloud.
 
 ```bash
 $ npm run deploy
