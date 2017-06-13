@@ -33,4 +33,4 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 ### What is used for styling?
 
-To keep the work effort low (and there a million ways to write CSS) the [Foundation CSS framework is included](https://github.com/stefanjudis/contentful-blog-in-5-min/blob/master/nuxt.config.js#L17). There is no further thinking behind this decision except to make this example "kind of" pretty. :)
+To keep the work effort low (and there a million ways to write CSS) the [Foundation CSS framework is included](http://foundation.zurb.com/sites/docs/v/5.5.3/css.html). There is no further thinking behind this decision except to make this example "kind of" pretty. :)
