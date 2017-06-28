@@ -35,7 +35,7 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import {cdaClient} from '../../plugins/contentful-client.js'
+import {cdaClient} from '~plugins/contentful-client.js'
 import Navigation from '~components/navigation.vue'
 
 export default {

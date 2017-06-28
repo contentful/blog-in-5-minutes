@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import {cdaClient} from '../plugins/contentful-client.js'
+import {cdaClient} from '~plugins/contentful-client.js'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
