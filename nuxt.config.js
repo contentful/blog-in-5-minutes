@@ -1,6 +1,7 @@
-const ctfConfig = require('./plugins/contentful-client').config
-const cdaClient = require('./plugins/contentful-client').cdaClient
-const cmaClient = require('./plugins/contentful-client').cmaClient
+'use strict'
+
+// const cdaClient = require('./plugins/contentful-cda-client').cdaClient
+// const cmaClient = require('./plugins/contentful-cma-client').cmaClient
 
 const config = {
   /*
@@ -51,7 +52,10 @@ const config = {
   ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
   ** Make client available everywhere via Nuxt plugins
   */
-  plugins: ['~plugins/contentful-client'],
+  plugins: [
+    '~plugins/contentful-cda-client',
+    '~plugins/contentful-cma-client'
+  ],
 
   /*
   ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
@@ -63,24 +67,19 @@ const config = {
   ** - available blog post tags
   */
   generate: {
-    routes () {
-      return Promise.all([
-        cdaClient.getEntries({
-          'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
-        }),
-        cmaClient.getSpace(ctfConfig.CTF_SPACE_ID)
-          .then(space => space.getContentType(ctfConfig.CTF_BLOG_POST_TYPE_ID))
-      ])
-      .then(([entries, postType]) => {
-        return [
-          ...entries.items.map(entry => `blog/${entry.fields.slug}`),
-          ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `tags/${tag}`)
-        ]
-      })
-    }
-  },
-
-  env: ctfConfig
+    // routes () {
+    //   return Promise.all([
+    //     cdaClient.getBlogPosts(),
+    //     cmaClient.getBlogPostContentType()
+    //   ])
+    //   .then(([posts, postType]) => {
+    //     return [
+    //       ...posts.map(entry => `blog/${entry.fields.slug}`),
+    //       ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `tags/${tag}`)
+    //     ]
+    //   })
+    // }
+  }
 }
 
 module.exports = config

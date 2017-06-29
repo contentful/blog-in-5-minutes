@@ -35,17 +35,16 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import {cdaClient} from '~plugins/contentful-client.js'
+import {getBlogPosts} from '~plugins/contentful-cda-client.js'
 import Navigation from '~components/navigation.vue'
 
 export default {
   asyncData ({ params }) {
-    return cdaClient.getEntries({
-      'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+    return getBlogPosts({
       'fields.slug': params.slug
-    }).then(entries => {
+    }).then(posts => {
       return {
-        post: entries.items[0]
+        post: posts[0]
       }
     })
     .catch(console.error)

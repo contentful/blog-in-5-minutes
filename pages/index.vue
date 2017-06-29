@@ -49,24 +49,21 @@
 </template>
 
 <script>
-import {cdaClient} from '~plugins/contentful-client.js'
+import {getMainPerson, getBlogPosts} from '~plugins/contentful-cda-client.js'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
 export default {
   asyncData ({ params }) {
     return Promise.all([
-      cdaClient.getEntries({
-        'sys.id': process.env.CTF_PERSON_ID
-      }),
-      cdaClient.getEntries({
-        'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+      getMainPerson(),
+      getBlogPosts({
         order: '-sys.createdAt'
       })
-    ]).then(([entries, posts]) => {
+    ]).then(([person, posts]) => {
       return {
-        person: entries.items[0],
-        posts: posts.items
+        person,
+        posts
       }
     }).catch(console.error)
   },

@@ -27,14 +27,13 @@
 </template>
 
 <script>
-import {cdaClient} from '~plugins/contentful-client.js'
+import {getBlogPosts} from '~plugins/contentful-cda-client.js'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
 export default {
   asyncData ({ params }) {
-    return cdaClient.getEntries({
-      'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+    return getBlogPosts({
       'fields.tags[in]': params.tag,
       order: '-sys.createdAt'
     }).then(entries => {
