@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Homepage header -->
     <header class="home header">
       <div class="picture">
         <img :src="person.fields.image.fields.file.url + '?w=1200'">
@@ -49,18 +48,20 @@
 </template>
 
 <script>
-import {cdaClient} from '~plugins/contentful-client.js'
+import {createClient} from '~plugins/contentful.js'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
+const client = createClient()
+
 export default {
-  asyncData ({ params }) {
+  asyncData ({env}) {
     return Promise.all([
-      cdaClient.getEntries({
-        'sys.id': process.env.CTF_PERSON_ID
+      client.getEntries({
+        'sys.id': env.CTF_PERSON_ID
       }),
-      cdaClient.getEntries({
-        'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+      client.getEntries({
+        'content_type': env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt'
       })
     ]).then(([entries, posts]) => {

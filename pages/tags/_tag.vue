@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Tag page header -->
     <header class="tag-page header">
       <div class="foreground">
         <div class="page-bar wrapper">
@@ -27,14 +26,16 @@
 </template>
 
 <script>
-import {cdaClient} from '~plugins/contentful-client.js'
+import {createClient} from '~plugins/contentful.js'
 import Navigation from '~components/navigation.vue'
 import ArticlePreview from '~components/article-preview.vue'
 
+const client = createClient()
+
 export default {
-  asyncData ({ params }) {
-    return cdaClient.getEntries({
-      'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+  asyncData ({ env, params }) {
+    return client.getEntries({
+      'content_type': env.CTF_BLOG_POST_TYPE_ID,
       'fields.tags[in]': params.tag,
       order: '-sys.createdAt'
     }).then(entries => {
@@ -50,6 +51,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

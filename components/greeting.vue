@@ -9,16 +9,9 @@
       <a href="https://app.contentful.com/" target="_blank" class="cta">Try the Web App</a>
     </div>
   </section>
-
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style>
-
   .greeting {
     background: #fff;
     border: 1px solid #489CF1;
@@ -65,5 +58,4 @@ export default {
       max-width: 20%;
     }
   }
-
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Article header -->
     <header class="article header">
       <div class="foreground">
         <div class="page-bar wrapper">
@@ -35,13 +34,15 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import {cdaClient} from '~plugins/contentful-client.js'
+import {createClient} from '~plugins/contentful.js'
 import Navigation from '~components/navigation.vue'
 
+const client = createClient()
+
 export default {
-  asyncData ({ params }) {
-    return cdaClient.getEntries({
-      'content_type': process.env.CTF_BLOG_POST_TYPE_ID,
+  asyncData ({ env, params }) {
+    return client.getEntries({
+      'content_type': env.CTF_BLOG_POST_TYPE_ID,
       'fields.slug': params.slug
     }).then(entries => {
       return {
