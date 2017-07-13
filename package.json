@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "contentful-import": "^4.4.3",
+    "contentful-import": "^4.5.4",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
