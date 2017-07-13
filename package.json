@@ -32,7 +32,8 @@
     "eslint-plugin-standard": "^2.0.1",
     "gh-pages": "^1.0.0",
     "git-clone": "^0.1.0",
-    "now": "^5.3.0"
+    "now": "^5.3.0",
+    "rimraf": "^2.6.1"
   },
   "config": {
     "commitizen": {
