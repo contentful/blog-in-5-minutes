@@ -10,7 +10,7 @@ To get you started you have to be registered at [Contentful](https://www.content
 
 ```bash
 $ git clone git@github.com:contentful/blog-in-5-minutes.git
-
+$ cd blog-in-5-minutes
 $ npm install
 ```
 
