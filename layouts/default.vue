@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import Greeting from '~components/greeting.vue'
+  import Greeting from '~/components/greeting.vue'
 
   export default {
     components: {

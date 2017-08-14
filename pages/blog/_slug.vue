@@ -34,8 +34,8 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import {createClient} from '~plugins/contentful.js'
-import Navigation from '~components/navigation.vue'
+import {createClient} from '~/plugins/contentful.js'
+import Navigation from '~/components/navigation.vue'
 
 const client = createClient()
 
