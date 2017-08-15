@@ -1,6 +1,6 @@
 {
   "name": "contentful-blog-in-5-min",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A static blog based on Contentful",
   "author": "stefan judis <stefanjudis@gmail.com>",
   "private": true,
