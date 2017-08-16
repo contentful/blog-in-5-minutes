@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import {createClient} from '~plugins/contentful.js'
-import Navigation from '~components/navigation.vue'
-import ArticlePreview from '~components/article-preview.vue'
+import {createClient} from '~/plugins/contentful.js'
+import Navigation from '~/components/navigation.vue'
+import ArticlePreview from '~/components/article-preview.vue'
 
 const client = createClient()
 
