@@ -22,7 +22,7 @@
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
-    src: url("/avenir-400.woff2") format("woff2");
+    src: url("~/static/avenir-400.woff2") format("woff2");
     font-display: swap;
   }
 
