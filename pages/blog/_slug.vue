@@ -23,8 +23,7 @@
           <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
           <h1>{{ post.fields.title }}</h1>
         </div>
-        <div class="copy">
-          <vue-markdown>{{post.fields.body}}</vue-markdown>
+        <div class="copy" v-html="marked(post.fields.body)">
         </div>
       </main>
     </section>
@@ -33,7 +32,7 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
+import {marked} from '~/plugins/marked.js'
 import {createClient} from '~/plugins/contentful.js'
 import Navigation from '~/components/navigation.vue'
 
@@ -53,7 +52,7 @@ export default {
   },
   components: {
     Navigation,
-    VueMarkdown
+    marked
   }
 }
 </script>
