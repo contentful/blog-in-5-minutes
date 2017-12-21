@@ -8,9 +8,7 @@
     "contentful": "^4.3.0",
     "contentful-management": "^3.4.0",
     "nuxt": "^1.0.0-rc4",
-    "vue-marked": "^0.1.1",
-    "vue-server-renderer": "2.5.11",
-    "vue-template-compiler": "2.5.11"
+    "vue-marked": "^0.1.1"
   },
   "scripts": {
     "dev": "nuxt",
