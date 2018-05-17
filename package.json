@@ -8,7 +8,7 @@
     "contentful": "^4.3.0",
     "contentful-management": "^3.4.0",
     "nuxt": "^1.0.0-rc4",
-    "vue-markdown": "^2.1.3"
+    "vue-marked": "^0.1.1"
   },
   "scripts": {
     "dev": "nuxt",
