@@ -22,20 +22,20 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "contentful-import": "^8.5.61",
+    "contentful-import": "^8.5.63",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^2.0.0",
-    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^2.0.1",
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.2.0",
     "listr": "^0.12.0",
     "node-fetch": "^1.7.3",
     "now": "^5.3.0",
-    "rimraf": "^2.6.1",
-    "tar": "^4.0.1"
+    "rimraf": "^2.7.1",
+    "tar": "^4.4.19"
   },
   "config": {
     "commitizen": {
